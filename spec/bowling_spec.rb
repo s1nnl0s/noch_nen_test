@@ -22,4 +22,9 @@ describe Bowling do
     10.times { game.hit(10) }
     game.score.should == 100
   end
+  it 'should fail here' do
+  game=Bowling.new
+  game.hit(110)
+  game.score.should == 100
+  end
 end
