@@ -16,7 +16,10 @@ describe Bowling do
   game = Bowling.new
   10.times {game.hit(9)}
   game.score.should eq(90)
-
-
+  end
+  it 'should be a 100 score game' do
+    game = Bowling.new
+    10.times { game.hit(10) }
+    game.score.should == 100
   end
 end
